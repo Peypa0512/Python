@@ -1,0 +1,95 @@
+
+NombreJug1 = input("Escribe el nombre del primer jugador: ")
+NombreJug2 = input("Escribe el nombre del segundo jugador: ")
+NombreJug3 = input("Escribe el nombre del tercer jugador: ")
+NombreJug4 = input("Escribe el nombre del cuarto jugador: ")
+
+dic_contador = [121,121,121,121]
+i=0
+a=1 
+b=0 
+
+if(i<2):
+#1 Jugada
+  print("Primera Partida")
+  dic_contador[0] -= int(input("Introduce los puntos que ha restado el jugador 1:"))
+  dic_contador[1] -= int(input("Introduce los puntos que ha restado el jugador 2: "))
+  dic_contador[2] -= int(input("Introduce los puntos que ha restado el jugador 3: "))
+  dic_contador[3] -= int(input("Introduce los puntos que ha restado el jugador 4: "))
+
+  if (dic_contador[0]) <= 0:
+    print("El jugador 1 con nombre {} ha ganado en la ronda {1 con {} puntos".format(NombreJug1,dic_contador[0]))
+    
+  else:
+    print("A {} le queda {} puntos".format(NombreJug1,dic_contador[0]))
+  if (dic_contador[1]) <= 0:
+    print("El jugador 2 con nombre {} ha ganado en la ronda 1 con {} puntos".format(NombreJug2,dic_contador[1]))
+  else:
+    print("A {} le queda {} puntos".format(NombreJug2,dic_contador[1]))  
+
+  if (dic_contador[2]) <= 0:
+    print("El jugador 3 con nombre {} ha ganado en la ronda 1 con {} puntos".format(NombreJug3,dic_contador[2]))
+  else:
+    print("A {} le queda {} puntos".format(NombreJug3,dic_contador[2]))  
+
+  if (dic_contador[3]) <= 0:
+    print("El jugador 4 con nombre {} ha ganado en la ronda 1 con {} puntos".format(NombreJug4,dic_contador[3]))
+  else:
+    print("A {} le queda {} puntos".format(NombreJug4,dic_contador[3]))  
+
+  #2 Jugada
+  print("Segunda Partida")
+  dic_contador[0] -= int(input("Introduce los puntos que ha restado el jugador1:"))
+  dic_contador[1] -= int(input("Introduce los puntos que ha restado el jugador2: "))
+  dic_contador[2] -= int(input("Introduce los puntos que ha restado el jugador3: "))
+  dic_contador[3] -= int(input("Introduce los puntos que ha restado el jugador4: "))
+
+  if (dic_contador[0]) <= 0:
+    print("El jugador 1 con nombre {} ha ganado en la ronda 2 con {} puntos".format(NombreJug1,dic_contador[0]))
+  else:
+    print("A {} le queda {} puntos".format(NombreJug1,dic_contador[0]))
+  if (dic_contador[1]) <= 0:
+    print("El jugador 2 con nombre {} ha ganado en la ronda 2 con {} puntos".format(NombreJug2,dic_contador[1]))
+  else:
+    print("A {} le queda {} puntos".format(NombreJug2,dic_contador[1]))  
+
+  if (dic_contador[2]) <= 0:
+    print("El jugador 3 con nombre {} ha ganado en la ronda2 con {} puntos".format(NombreJug3,dic_contador[2]))
+  else:
+    print("A {} le queda {} puntos".format(NombreJug3,dic_contador[2]))  
+
+  if (dic_contador[3]) <= 0:
+    print("El jugador 4 con nombre {} ha ganado en la ronda 2 con {} puntos".format(NombreJug4,dic_contador[3]))
+  else:
+    print ("A {} le queda {} puntos".format(NombreJug4,dic_contador[3]))  
+
+
+  #3 Jugada
+  print("Tercera Partida")
+  dic_contador[0] -= int(input("Introduce los puntos que ha restado el jugador1:"))
+  dic_contador[1] -= int(input("Introduce los puntos que ha restado el jugador2: "))
+  dic_contador[2] -= int(input("Introduce los puntos que ha restado el jugador3: "))
+  dic_contador[3] -= int(input("Introduce los puntos que ha restado el jugador4: "))
+
+  if (dic_contador[0]) <= 0:
+    print("El jugador 1 con nombre {} ha ganado en la ronda 3 con {} puntos".format(NombreJug1,dic_contador[0]))
+  else:
+    print("A {} ha terminado la partida y le queda {} puntos".format(NombreJug1,dic_contador[0]))
+  if (dic_contador[1]) <= 0:
+    print("El jugador 2 con nombre {} ha ganado en la ronda 3 con {} puntos".format(NombreJug2,dic_contador[1]))
+  else:
+    print("A {} ha terminado la partida y le queda {} puntos".format(NombreJug2,dic_contador[1]))  
+
+  if (dic_contador[2]) <= 0:
+    print("El jugador 3 con nombre {} ha ganado en la ronda 3 con {} puntos".format(NombreJug3,dic_contador[2]))
+  else:
+    print("A {} ha terminado la partida y le queda {} puntos".format(NombreJug3,dic_contador[2]))  
+
+  if (dic_contador[3]) <= 0:
+    print("El jugador 4 con nombre {} ha ganado en la ronda 3 con {} puntos".format(NombreJug4,dic_contador[3]))
+  else:
+    print("A {} ha terminado la partida y le queda {} puntos".format(NombreJug4,dic_contador[3]))  
+  b=a
+  a=a+1
+   
+i+=1
