@@ -1,6 +1,6 @@
 git init ---->inicializamos en local
-git add -m "Comentario" --> agregamos archivos al repositorio local con un comentario
-git add * ---> añadimos todos los archivos que haya
+git add * ---> aÃ±adimos todos los archivos que haya
+git commit -m "Comentario" --> hacemos un primer commit para ejecutar y aÃ±adir con un comentario
 git branch -M main 
-git remote add origin https: ---> hacemos una conexión con el destinatario del repositorio en github
+git remote add origin https: ---> hacemos una conexiÃ³n con el destinatario del repositorio en github
 git push -u origin main ---> subimos el repositorio
