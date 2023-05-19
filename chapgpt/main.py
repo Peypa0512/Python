@@ -3,7 +3,7 @@ import openai
 while True:
 
     prompts = input("\n Introduce una pregunta: ")
-    openai.api_key = "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"
+    openai.api_key = "Clave chatgpt"
 
     if prompts == "exit":
         break
