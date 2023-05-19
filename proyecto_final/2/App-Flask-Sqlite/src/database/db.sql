@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS "Usuarios" (
+	"ID"	INTEGER NOT NULL,
+	"nombre"	TEXT NOT NULL,
+	"apellido"	TEXT NOT NULL,
+	"password"	TEXT NOT NULL,
+	"telefono"	TEXT,
+	"edad"	INTEGER,
+	PRIMARY KEY("ID" AUTOINCREMENT)
+);

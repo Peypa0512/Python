@@ -1,0 +1,202 @@
+import random
+
+
+
+colores = ['amarillo','verde','azul','rojo']
+color = colores.copy()
+ordenado = []
+x = 0
+repetido =[]
+usuarios = ['Josep','Claudio', 'Isabel','Sheila']
+usu = usuarios.copy()
+
+
+def uno():
+    
+    repetido = []
+
+    i = str(input("Introducir un nuevo color:    "))
+
+    # si no se introducen colores
+    while i == "":
+        print(" No se ha introducido color, vuelve a intentarlo")
+        i = str(input("Introducir un nuevo color:    "))
+
+        a = str(input("¿Quieres Introducir un nuevo color? (S/N):    "))
+        if a != "s" and a != "n" and a != "S" and a != "N":
+            print("Tiene que introducir S / N")
+        else:
+            break
+
+
+
+
+    while True:
+        for x in colores:
+            if i not in color:
+                if i != color:
+                    color.append(i)
+                    print("color introducido")
+                    break
+
+        else:
+            repetido.append(i)
+            print("color repetido")
+
+        a = str(input("¿Desea introducir más colores? (S/N) "))
+        if a == 's' or a == 'S':
+            i = str(input("Introducir otro nuevo color:    "))
+
+        elif a != "s" and a != "n" and a != "S" and a != "N":
+            print("Tiene que introducir S / N")
+
+        else:
+            break
+
+    color.sort()
+
+    print(color)
+
+
+  # añadir usuarios
+
+
+
+def dos():
+    aleatorio = {}
+    nomb_num = usuarios
+    col=len(color)
+
+    iz = str(input("Introduzca nombre de usuario:   "))
+
+    # si no se introducen valores
+    while iz == "":
+        print(" No se ha introducido color, vuelve a intentarlo")
+        i = str(input("Introducir un nuevo color:    "))
+        break
+
+    while True:
+        nomb_num.append(iz)
+        a = str(input("¿Desea introducir más usuarios? (S/N) "))
+        if a == 's' or a == 'S':
+            iz = str(input("Introducir un nuevo usuario:    "))
+        elif a != "s" and a != "n" and a != "S" and a != "N":
+            print("Tiene que introducir S / N")
+        else:
+            break
+
+    #Igualar usuarios y colores
+    nomb = len(nomb_num)
+    print(col)
+    print(nomb)
+
+    while True:
+        if nomb < col:
+            iz = str(input("Introducir un nuevo usuario:    "))
+            nomb_num.append(iz)
+            
+
+        elif col < nomb:
+            im = str(input("Introducir un nuevo color:    "))
+            color.append(im)
+            col=len(color)
+            color.sort()
+            print(color)
+            print(len(color))
+        else:
+            if nomb == col:
+                print("Se tienen tantos usuarios como colores")
+                break
+
+
+    ordenado = sorted(nomb_num)
+    print(*ordenado)
+
+    z = len(ordenado)
+    y = len(color)
+
+     #dar un numero aleatorio
+    contador = 0
+
+    while contador < y:
+        for f in range(y):
+            ad = random.randint(0, y-1)
+            if ad not in aleatorio:
+                aleatorio.setdefault(ad)
+            else:
+                random.randint(0,y)
+
+        contador += 1
+    print(aleatorio.keys())
+
+
+    # creo diccionario
+    col_2 = {}
+    cuenta = 0
+    co = len(color)
+    for m in color:
+        col_2[cuenta] = color[cuenta]
+        cuenta +=1
+
+
+    # hacer diccionario aleatorio con color
+    cuen=0
+    while cuen <= len(aleatorio):
+       try:
+            for c in aleatorio:
+                print(f' El usuario {ordenado[cuen]} tiene el color {col_2[c]}')
+                cuen += 1
+            if c > len(aleatorio):
+                break
+       except IndexError:
+            break
+
+def tres():
+
+    usu.sort()
+    print(*usu)
+
+    while True:
+
+        try:
+            el = int(
+                input("Para eliminar un usuario tienes que decir un numero del 1 al 4: "))
+            break
+
+
+        except ValueError:
+            print("Tienes que introducir un valor numerico")
+
+        except IndexError:
+            print("no hay tantos usuarios")
+
+    print("Has eliminado el usuario", usu.pop(el))
+    print("Ahora quedan los usuarios ", *usu)
+
+def cuatro():
+  print("Fin de Programa, hasta luego :)")
+  return False
+
+
+def switch(opcion):
+    diccionario = {
+    "1": "uno()",
+    "2": "dos()",
+    "3": "tres()",
+    "4": "cuatro()"
+
+    }
+    return eval(diccionario.get(opcion))
+
+while (True):
+  print("""Introduzca una Opción:
+  1: Introducir color
+  2: Introducir usuario
+  3: Eliminar usuario 
+  4: SALIR
+  """)
+  opcion = input()
+  continuar = switch(opcion)
+  if (continuar==False):
+    print("Finaliza el Programa.")
+    break

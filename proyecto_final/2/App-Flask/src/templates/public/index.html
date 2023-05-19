@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+    INDEX
+{% endblock %}
+{% block content %}
+    <main id="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12 d-flex">
+                    <div id="content-usuarios" class="justify-content-center align-self-center mx-auto my-4">
+                        <div class="card">
+                            <div class="card-header text-center bg indigo" >
+                                <h3>
+                                    <font color="white">USUARIOS</font>
+                                </h3>
+                            </div>
+                            <div class="card-body">
+                              <form action="/" method="GET" class="px-5">
+                                <h4>Mostrar todos los usuarios</h4>
+                               </form>
+                              <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+                              <div class="md-form">
+                                <button type="button" class="btn btn-primary btn-block ">
+                                  <a href="/show/usuario" style="color: #FFFFFF;">
+                                    ACCEDER
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+
+
+{% endblock %}

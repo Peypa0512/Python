@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block titulo %}USUARIOS {% endblock %}
+{% block content %}
+<div class="row g-0">
+        <div class="col-lg-12 d-flex">
+            <div id="content-main" class="justify-content-center align-self-center mx-auto my-5">
+                <form action="/insert/usuario" method="GET">
+                    <div class="table-responsive-lg">
+                        <table class="table table-striped table-bordered bg-white table-sm">
+                            <thead>
+                                <tr>
+                                    <td align="center" valign="middle">ID Usuario</td>
+                                    <td align="center" valign="middle">Nombre</td>
+                                    <td align="center" valign="middle">Apellidos</td>
+                                    <td align="center" valign="middle">Contraseña</td>
+                                    <td align="center" valign="middle">Teléfono</td>
+                                    <td align="center" valign="middle">Edad</td>
+                                </tr>
+                            </thead>
+                             {% for usuario in data%}
+                                <tbody>
+
+                                    <tr>
+                                        <td align="center" valign="bottom">{{usuario.0}}</td>
+                                        <td valign="bottom">{{usuario.1}}</td>
+                                        <td valign="bottom">{{usuario.2}}</td>
+                                        <td align="right" valign="bottom">{{usuario.3}}</td>
+                                        <td valign="bottom">{{usuario.4}}</td>
+                                        <td align="center" valign="bottom">{{usuario.5}}</td>
+                                        <td align="center">
+                                            <div class="d-flex mx-1">
+                                                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"/>
+                                                <form action="/delete/usuario/{{usuario.0}}" method="POST">
+                                                    <button class="btn btn-danger btn-sm btn-delete" ><i class="fa-solid fa-trash"></i></button>
+                                                </form>
+                                                <form action="/update/usuario/{{usuario.0}}" method="GET">
+                                                    <button class="btn btn-success btn-sm"><i class="fa-solid fa-file-signature"></i></button>
+                                                </form>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                 </tbody>
+                             {% else %}
+                                <div class="col-lg12 d-flex">
+                                    <div id="content-usuario" class="justify-content-center align-self-center mx-auto my 3 text-center">
+                                        <h2> No hay usuarios que mostrar</h2>
+                                    </div>
+                                </div>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div align="center">
+         <a href="/show/usuario" >Volver <i class="fas fa-home"></i></a>
+    </div>
+{% endblock %}

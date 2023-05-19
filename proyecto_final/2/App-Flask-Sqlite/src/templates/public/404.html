@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block titulo %} PAGINA NO ENCONTRADA {% endblock %}
+{% block content %}
+    <section id="no_encontrado">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 d-flex">
+                    <div id="content-not-found" class="justify-content-center-align-self-center mx-auto my-5">
+                        <h2><b>NO SE HA ENCONTRADO LA PÁGINA</b></h2>
+
+                        <a href="/" class="btn btn-primary btn-lg">
+                            Ir al Inicio <i class="fas fa-home"></i>
+                        </a>
+                    </div>
+                </div>
+                 <div class="col-lg-4 d-flex">
+                        <div id="content-not-found " class="justify-content-center align-self-center mx-auto my-5">
+                            <img src="{{ url_for('static', filename='images/404.png') }}" alt="No encontrado">
+                        </div>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock %}
