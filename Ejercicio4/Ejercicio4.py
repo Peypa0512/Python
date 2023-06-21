@@ -5,18 +5,18 @@ from os import remove
 
 def carga_datos(i):
 
-    if i==1:
+    if i== 1:
 
         f = open("ligas/La_Liga.txt", "a", encoding="utf-8")
         with open("Liga_Española.json", encoding="utf-8") as contenido:
             curso = json.load(contenido)
 
-    elif i==2:
+    elif i== 2:
         f = open("ligas/Premier.txt", "a", encoding="utf-8")
         with open("Liga_Inglesa.json", encoding="utf-8") as contenido:
             curso = json.load(contenido)
 
-    elif i==3:
+    elif i== 3:
         f = open("ligas/Calcio.txt", "a", encoding="utf-8")
         with open("Liga_Italiana.json", encoding="utf-8") as contenido:
             curso = json.load(contenido)
